@@ -1,0 +1,60 @@
+body{
+    background-image: linear-gradient(to bottom,#a937e6 ,#08e4fd);
+    height: 100vh;
+    color: white;
+    font-size: 2rem;
+    box-shadow: ;
+}
+.forum{
+    padding: 5vw;
+   
+
+}
+.child{
+    margin-left: 16%;
+    width: 900px;
+    display: grid;
+    grid-template-columns: auto auto;
+    border : 2px solid white;
+    box-shadow: 0px 4px 8px 0px black;
+    padding: 2%;
+}
+input{
+    margin-left: 2%;
+    margin-bottom: 4%;
+    font-size: 2rem;
+    background: transparent;
+    border : 2px solid white;
+    box-shadow: 0px 4px 8px 0px black;
+    color: white;
+    text-align: center;
+}
+input::placeholder{
+    color: white;
+}
+input:hover{
+    color: #71e637;
+}
+
+output{
+    color: white;
+    font-size: 2rem;
+}
+.Salary{
+    margin-left: 2%;
+}
+input[type="file"]{
+    background: transparent;
+}
+#profilepic{
+    background: transparent;
+    display: none;
+}
+
+#profilepitcure{
+    border: 2px solid white;
+    margin-left: 2%;
+    padding: 1%;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px 0px black;
+}

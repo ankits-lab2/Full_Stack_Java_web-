@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuliFunction</title>
+</head>
+<body>
+    <button onclick="but1()">Button1</button>
+    <button onclick="but2()">Button2</button>
+    <button onclick="but3()">Button3</button>
+    <script>
+        function but1(a,b){
+            sum =a +b;
+            return sum;
+        }
+        function but2(){
+            a=4;b=5;
+            sum="9";
+            parseInt(sum);
+            console.log(sum);
+        }
+        function but3(a,b){
+            const price = but1(4,5);
+            console.log("type of",typeof(price));
+            console.log("price",price);
+        }
+    </script>
+</body>
+</html>

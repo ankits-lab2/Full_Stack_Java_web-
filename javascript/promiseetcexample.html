@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .button {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="" placeholder="Enter the ice cream name" id="">
+        <input type="text" name="" placeholder="Enter the ice cream toping" id="">
+        <input type="text" name="" placeholder="Price" id="">
+        <input type="text" name="" placeholder="paymentReceived" id="paymentReceived">
+    </form>
+
+    <div class="button">
+        <button id="btn1" onclick="btn1()">Function 1</button>
+    </div>
+    <div class="button">
+        <button id="btn2" onclick="btn2()">Function 2</button>
+    </div>
+    <div class="button">
+        <button id="btn3" onclick="btn3()">Function 3</button>
+    </div>
+    <script>
+        let task = (time,work) => {
+                let paymentReceived = document.getElementById("paymentReceived").value;
+                return new Promise((resolve,reject)=>{
+                    if(paymentReceived == "true"){
+                    setTimeout(() => {
+                        resolve(work());
+                    }, time);
+                }else{
+                    reject(console.log("rejected"))
+                    }
+                })
+            }
+            let obj = {
+                "name":"david",
+                "falvour":"vanilla",
+                "price":"800"
+            }
+        function btn1(){
+            console.log("button Called")
+            let i = 0
+            task(1000,()=>{
+                console.log('name -- ', obj.name)
+            }).then(()=>{
+                return task(2000,()=>{
+                    console.log('falvour -- ', obj.falvour)
+            })}).then(()=>{
+                return task(2000,()=>{
+                    console.log('price -- ', obj.price)
+            })}).catch(()=>{
+                    console.log("Error");
+                })
+                .finally(()=>{
+                    console.log("Task Completed");
+
+                })
+            // create a promise
+
+        }
+
+        async function completeTask (time,work){
+            return setTimeout(() => {
+                        work();
+                    }, time);
+        }
+        function btn2(){
+            console.log("button Called")
+            let i = 0
+            completeTask(1000,()=>{
+                console.log(i)
+            }).then(()=>{
+                return completeTask(2000,()=>{
+                console.log(i+1)
+            })})
+            // create a promise
+
+        }
+
+
+        async function btn3() {
+
+        let promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("done!"), 1000)
+        });
+
+        let result = await promise; // wait until the promise resolves (*)
+
+        alert(result); // "done!"
+        }
+
+    </script>
+</body>
+</html>

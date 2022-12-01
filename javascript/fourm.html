@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fourm.css">
+</head>
+
+<body>
+    <div class="forum">
+        <div class="child">
+            <form onsubmit="displayData()">
+            <input type="text" id="fname" placeholder="First Name">
+            <input type="text" id="lname" placeholder="Last Name">
+            <input type="date" id="age" placeholder="AGE">
+            <input type="text" id="MobileNo" placeholder="Mobile Number">
+            <input type="file" id="profilepic" placeholder="Profile Picture">
+            <!-- <label for="profilepic" id="profilepitcure">Select profile pitcure</label>
+            <div class="Salary">
+                <label>Salary</label>
+                <input type="range" id="a" value="50" min="0" max="1000000">
+                <output name="x" for="a">
+                </output>
+            </div> -->
+            <input type="date" placeholder="Date of birth">
+            <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <table border="1" style="padding: 5px;">
+        <tr>
+            <th style="padding: 5px;">First Name</th>
+            <th style="padding: 5px;">Last Name</th>
+            <th style="padding: 5px;">Age</th>
+            <th style="padding: 5px;">Mobile Number</th>
+            <th style="padding: 5px;">function</th>
+        </tr>
+        <tbody id="demo">
+
+        </tbody>
+
+        <ul>
+
+        </ul>
+    </table>
+
+    <script>
+        let count = 0;
+
+        let table = document.getElementById("demo");
+
+        // td.innerHTML = `HEllox`
+            
+            
+        // tr.append(td)
+        
+        function displayData() {
+            let myArray = [];
+            var first_name = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var age = document.getElementById("age").value;
+            var MobileNo = document.getElementById("MobileNo").value;
+
+            console.log(count)
+            const myobj = {
+                "id": count,
+                "firstName": first_name,
+                "lastName": lname,
+                "age": age,
+                "MobileNo": MobileNo,
+            }
+
+            myArray.push(myobj);
+            console.log(myArray);
+            let tr = document.createElement("tr")
+            let td = document.createElement("td")
+            table.append(tr)
+            tr.append(td)
+            td.innerHTML = "text" 
+            // let tr = document.createElement("tr")
+            // let td = document.createElement("td")
+            // td.innerHTML = `HEllox`
+            // table.append(tr)
+            // tr.append(td)
+            // for (let value of myArray) {
+            //     console.log(value);
+            //     let newRow = table.insertRow(0);
+            //     newRow.insertCell(0).innerHTML = value.firstName;
+            //     newRow.insertCell(1).innerHTML = value.lastName;
+            //     newRow.insertCell(2).innerHTML = value.age;
+            //     newRow.insertCell(3).innerHTML = value.MobileNo;
+            //     newRow.insertCell(4).innerHTML = `<button>Edit</button><button>Delete</button>`
+            // }
+            
+
+            // let ul = document.querySelector("ul")
+            // let li = document.createElement("li")
+            // ul.append(li)
+            // li.append(first_name)
+            count = parseInt(count) + 1;
+        }
+        console.log(count);
+
+        function edit(){
+
+        }
+
+        function deleteObj() {
+        
+        }
+
+    </script>
+</body>
+
+</html>

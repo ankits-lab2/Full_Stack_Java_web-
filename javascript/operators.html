@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const student = [
+            {
+                "Name": "Xyz1",
+                "makrs": 30,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 35,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 85,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 95,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 45,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 65,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 66,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 45,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 88,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 56,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 66,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 38,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 66,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 77,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 22,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 55,
+                "grade": null
+            }, {
+                "Name": "Xyz1",
+                "makrs": 55,
+                "grade": null
+            }
+        ]
+        for (const iterator of student) {
+
+            switch (iterator.makrs >= 0) {
+                case iterator.makrs >= 90:
+                    iterator.grade = "A";
+                    break;
+                case iterator.makrs >= 80:
+                    iterator.grade = "B";
+                    break;
+                case iterator.makrs >= 65:
+                    iterator.grade = "C";
+                    break;
+                case iterator.makrs >= 50:
+                    iterator.grade = "D";3
+                    break;
+                case iterator.makrs >= 35:
+                    iterator.grade = "E";
+                    break;
+                case iterator.makrs <= 35:
+                    iterator.grade = "F";
+                    break;
+                default:
+                    console.log("nothing to do");
+
+            }
+
+        }
+        console.log(student);
+
+    </script>
+</body>
+
+</html>

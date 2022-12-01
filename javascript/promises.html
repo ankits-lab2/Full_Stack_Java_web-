@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myfun1()">Function 1</button>
+    <button onclick="myfun2()">Function 2</button>
+    <button onclick="myfun3()">Function 3</button>
+
+
+    <script>
+        function myfun1(){
+            let a = 5;
+            let b = 4;
+            setTimeout(() => {
+                myfun2(a,b);
+            }, 5000);
+            setTimeout(() => {
+                myfun3(a,b);
+            }, 1000);
+            
+        }
+        
+        function myfun2(a,b){
+            console.log("sum", a+b);
+
+        }
+        
+        function myfun3(a,b){
+            console.log("sub", a-b);
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="NITINCK"></p>
+    <p id="VISHALCK"></p>
+    <script>
+        let arr =["NITINCK","VISHALCK"]
+       
+
+        const data = [{
+            id:0,
+            headerName:"NITINCK",
+            headerName1:"NITINCK"
+        },
+        {
+            id:2,
+            headerName:"VISHALCK"
+        },
+        {
+            id:3,
+            headerName:"J1"
+        }
+       
+    ]
+    
+    let heading = document.getElementById("NITINCK");
+        heading.innerHTML = JSON.stringify(data,null,0)
+        let heading2 = document.getElementById("VISHALCK");
+        for (const iterator of data) {
+            heading2.innerHTML += "<div><span>"+iterator.id+"</span>:<span>"+iterator.headerName+"</span></div>"
+            
+        }
+    </script>
+</body>
+</html>
